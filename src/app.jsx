@@ -8,43 +8,46 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'font-awesome/css/font-awesome.min.css'
-import './index.css';
-import './index.scss'
+// import './index.css';
+// import './index.scss'
+/**function 形式 */
+// function Component(){ // 组件变量名用大写
+//   return <h1>I am PQ</h1>
+// }
+
 // ReactDOM.render(
-//   <div>
-//     <i className="fa fa-snowflake-o"></i>
-//     <h1>Hello, world!</h1>
-//   </div>
-//   ,
+//   <Component/>,
 //   document.getElementById('app')
 // )
-// 样式没有了横杠，变成了驼峰
-let style = { // 优先级比css更高一点
-  // color: 'red',
-  // fontSize: '20px',
-}
-let name = 'Pandora'
-let flag = false
-let names = ['ppq', 'pq', 'pandora']
-let jsx = (
-  <div className="jsx" style={style}>
-    {/*变量*/}
-    <p>I am {name}</p>
-    {/**条件判断 */}
-    {
-      flag ? <p>I am {name}</p> : <p>not {name}</p>
-    }
-    {/**数组循环 */}
-    {
-      names.map((name, index) => 
-        <p key={index}>Hello,I love {name}</p>
-      )
-    }
-    jsx____
-  </div>
-);
 
-ReactDOM.render(
-  jsx,
+/**ES6形式 */
+class ES6Component extends React.Component{
+  render(){
+    return <h1>I am PQ ES6</h1>
+  
+  }
+}
+
+class Component extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      name: 'Pandora'
+    }
+  }
+  render(){
+    setTimeout(()=>{
+      this.setState({
+        name: 'Pandora Tea'
+      })
+    },2000)
+    return <h1>I am {this.state.name}</h1>
+  }
+}
+ReactDOM.render( 
+  <div>
+    <Component/>
+    <ES6Component/>
+  </div>,
   document.getElementById('app')
 )
