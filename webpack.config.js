@@ -20,7 +20,8 @@ module.exports = {
         filename: 'js/app.js'
     },
     resolve: {
-        alias : {
+        alias : {// 处理别名
+            // @           : path.resolve(__dirname, 'src'),
             page        : path.resolve(__dirname, 'src/page'),
             component   : path.resolve(__dirname, 'src/component'),
             util        : path.resolve(__dirname, 'src/util'),
