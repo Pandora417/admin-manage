@@ -101,7 +101,7 @@ module.exports = {
     ],
     devServer: {
         port: 8086,
-        historyApiFallback: {
+        historyApiFallback: { // 如果404就返回到这里 就是如果是错误的话 不管怎么输都会进到这个路径下
             index: '/dist/index.html'
         },
         proxy : {

@@ -1,9 +1,13 @@
 import React from 'react'
-
+import './index.css'
 class Home extends React.Component{
   render(){
     return(
-      <h1>hello</h1>
+      <div>
+        <h1>hello</h1>
+        <button className="btn btn-default">test</button>
+      </div>
     )
   }
 }
+export default Home
