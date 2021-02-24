@@ -18,8 +18,12 @@ class App extends React.Component{
       <Router>
         <Layout>
           <Switch>
-            <Route exact path="/" component={(props) => <Home { ...props } />}/>
-            <Redirect from="*" to="/"/>
+          <Route exact path="/" component={(props) => <Home { ...props } />}/>
+          <Route path="/product" component={(props) => <Home { ...props } />}/>
+          <Route path="/product-category" component={(props) => <Home { ...props } />}/>
+          <Route path="/order" component={(props) => <Home { ...props } />}/>
+          <Route path="/user" component={(props) => <Home { ...props } />}/>
+            {/* <Redirect from="*" to="/"/> */}
           </Switch>
         </Layout>
       </Router>

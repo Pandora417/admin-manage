@@ -1,5 +1,16 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Autor: Pandora
+ * @Date: 2021-02-24 08:25:37
+ */
+
 import React from 'react';
-import './theme.css'
+
+import NavTop from '../nav-top/index.jsx';
+import NavSide from '../nav-side/index.jsx';
+
+import './theme.css';
 class Layout extends React.Component{
   constructor(props){
     super(props)
@@ -7,12 +18,8 @@ class Layout extends React.Component{
   render(){
     return(
       <div id="wrapper">
-        test wrapper
-        {/**
-         * <TopNav />
-        <SideNav />
-         */}
-        
+        <NavTop />
+        <NavSide />
         {this.props.children}
       </div>
     )
