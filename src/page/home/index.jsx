@@ -17,7 +17,6 @@ class Home extends React.Component{
             body
           </div>
         </div>
-        <button className="btn btn-default">test</button>
       </div>
     )
   }
