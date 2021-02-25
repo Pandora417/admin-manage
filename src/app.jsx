@@ -18,7 +18,7 @@ class App extends React.Component{
       <Router>
         <Layout>
           <Switch>
-          <Route exact path="/" component={(props) => <Home { ...props } />}/>
+          <Route exact={true} path="/" component={(props) => <Home { ...props } />}/>
           <Route path="/product" component={(props) => <Home { ...props } />}/>
           <Route path="/product-category" component={(props) => <Home { ...props } />}/>
           <Route path="/order" component={(props) => <Home { ...props } />}/>
